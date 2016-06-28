@@ -46,6 +46,7 @@
     <Compile Include="MathClasses\Fibonnaci.cs" />
     <Compile Include="MathClasses\LargestPrimeFactor.cs" />
     <Compile Include="MathClasses\Palindrome.cs" />
+    <Compile Include="MathClasses\SmallestMultiple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

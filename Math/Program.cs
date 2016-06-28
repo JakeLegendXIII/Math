@@ -20,8 +20,10 @@ namespace Math
         private static readonly bool IS_LARGEST_PRIME_FACTOR_RECURSIVE = false;
         private static readonly bool IS_LARGEST_PRIME_FACTOR_QUICKER = false;
         // Palindrome
-        private static readonly bool IS_PALINDROME_3_DIGITS_RECURSIVE = true;
-        private static readonly bool IS_PALINDROME_3_DIGITS_QUICKER = true;
+        private static readonly bool IS_PALINDROME_3_DIGITS_RECURSIVE = false;
+        private static readonly bool IS_PALINDROME_3_DIGITS_QUICKER = false;
+        //Smallest Multiple
+        private static readonly bool IS_SMALLEST_MULTIPLE_RANGE_GCD_EUCLIDEAN = true;
 
         static void Main(string[] args)
         {
@@ -103,12 +105,32 @@ namespace Math
                 Palindrome p = new Palindrome();
                 Console.WriteLine("Calculating largest Palindrome from the product of two 3 digit numbers (p builder):");
                 Console.WriteLine(_closeOut);
+                sw.Start();
                 Console.WriteLine("Answer: " + p.LargestPalindromeThreeDigitsQuicker());
                 Console.WriteLine("Made by multiplying " + p.Factor + " and " + p.Factor1);
                 sw.Stop();
                 Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
+            #endregion
+
+            #region SmallestMultiple
+
+            if (IS_SMALLEST_MULTIPLE_RANGE_GCD_EUCLIDEAN)
+            {
+                Stopwatch sw = new Stopwatch();
+                SmallestMultiple sm = new SmallestMultiple();
+                Console.WriteLine("Enter Max number for range of Smallest Multiple (starts at 1): ");
+                Console.WriteLine(_closeOut);
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Answer: " + sm.SmallestMultipleByRange(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+
             #endregion
             Console.ReadLine();
         }
