@@ -47,6 +47,7 @@
     <Compile Include="MathClasses\LargestPrimeFactor.cs" />
     <Compile Include="MathClasses\Palindrome.cs" />
     <Compile Include="MathClasses\SmallestMultiple.cs" />
+    <Compile Include="MathClasses\SumSquareDifference.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -23,7 +23,9 @@ namespace Math
         private static readonly bool IS_PALINDROME_3_DIGITS_RECURSIVE = false;
         private static readonly bool IS_PALINDROME_3_DIGITS_QUICKER = false;
         //Smallest Multiple
-        private static readonly bool IS_SMALLEST_MULTIPLE_RANGE_GCD_EUCLIDEAN = true;
+        private static readonly bool IS_SMALLEST_MULTIPLE_RANGE_GCD_EUCLIDEAN = false;
+        // Sum Square Difference 
+        private static readonly bool IS_SUM_SQUARE_DIFFERENCE = true;
 
         static void Main(string[] args)
         {
@@ -127,6 +129,26 @@ namespace Math
                 sw.Start();
                 Console.WriteLine("Answer: " + sm.SmallestMultipleByRange(Convert.ToInt32(value)));
                 sw.Stop();
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+
+            #endregion
+
+            #region SumSquareDifference
+            if (IS_SUM_SQUARE_DIFFERENCE)
+            {
+                Stopwatch sw = new Stopwatch();
+                SumSquareDifference ssd = new SumSquareDifference();
+                Console.WriteLine("Input Max Natural Number: ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Square of Sums: " + ssd.squareSum(Convert.ToInt32(value)));
+                Console.WriteLine("Sum of Square: " + ssd.sumSquare(Convert.ToInt32(value)));
+                Console.WriteLine("Sum Square Difference: " + ssd.SumSquareDifferenceAnswer(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
