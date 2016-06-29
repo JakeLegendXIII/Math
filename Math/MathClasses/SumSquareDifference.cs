@@ -30,13 +30,12 @@ namespace Math.MathClasses
         public int sumSquare(int a)
         {
             int sumSquare = 0;
-            int swag = 0;
+            int square = 0;
             for (int i = 1; i <= a; i++)
             {
-                swag = i * i;
-                sumSquare += swag;
+                square = i * i;
+                sumSquare += square;
             }
-
             return sumSquare;
         }
     }

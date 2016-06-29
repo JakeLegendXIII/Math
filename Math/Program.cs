@@ -154,6 +154,8 @@ namespace Math
             }
 
             #endregion
+
+
             Console.ReadLine();
         }
     }
