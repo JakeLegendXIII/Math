@@ -25,7 +25,9 @@ namespace Math
         //Smallest Multiple
         private static readonly bool IS_SMALLEST_MULTIPLE_RANGE_GCD_EUCLIDEAN = false;
         // Sum Square Difference 
-        private static readonly bool IS_SUM_SQUARE_DIFFERENCE = true;
+        private static readonly bool IS_SUM_SQUARE_DIFFERENCE = false;
+        // Find Prime
+        private static readonly bool IS_FIND_PRIME_BY_NUMBER = true;
 
         static void Main(string[] args)
         {
@@ -155,6 +157,22 @@ namespace Math
 
             #endregion
 
+            #region 10001st prime
+            if (IS_FIND_PRIME_BY_NUMBER)
+            {
+                Stopwatch sw = new Stopwatch();
+                Prime p = new Prime();
+                Console.WriteLine("Input Desired Prime Number: ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Selected Prime: " + p.GetPrimeAtNumber(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
 
             Console.ReadLine();
         }
