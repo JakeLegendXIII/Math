@@ -27,7 +27,9 @@ namespace Math
         // Sum Square Difference 
         private static readonly bool IS_SUM_SQUARE_DIFFERENCE = false;
         // Find Prime
-        private static readonly bool IS_FIND_PRIME_BY_NUMBER = true;
+        private static readonly bool IS_FIND_PRIME_BY_NUMBER = false;
+        // Largest Product in Series
+        private static readonly bool IS_LARGEST_PRODUCT_IN_SERIES = true;
 
         static void Main(string[] args)
         {
@@ -167,6 +169,21 @@ namespace Math
                 Console.WriteLine(_closeOut);
                 sw.Start();
                 Console.WriteLine("Selected Prime: " + p.GetPrimeAtNumber(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Largest Product in a series
+            if (IS_LARGEST_PRODUCT_IN_SERIES)
+            {
+                Stopwatch sw = new Stopwatch();
+                Prime p = new Prime();
+                LargestProductSeries lps = new LargestProductSeries();
+                sw.Start();
+                Console.WriteLine("Answer 8 for long series: " + lps.Answer8());
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
