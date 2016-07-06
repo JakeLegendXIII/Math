@@ -29,7 +29,9 @@ namespace Math
         // Find Prime
         private static readonly bool IS_FIND_PRIME_BY_NUMBER = false;
         // Largest Product in Series
-        private static readonly bool IS_LARGEST_PRODUCT_IN_SERIES = true;
+        private static readonly bool IS_LARGEST_PRODUCT_IN_SERIES = false;
+        // Pythagorean Triplet
+        private static readonly bool IS_PYTHAGOREAN_TRIPLET = true;
 
         static void Main(string[] args)
         {
@@ -191,7 +193,26 @@ namespace Math
             }
             #endregion
 
+            #region Pythagorean Triplet
+            if (IS_PYTHAGOREAN_TRIPLET)
+            {
+                Stopwatch sw = new Stopwatch();
+                Palindrome p = new Palindrome();
+                PythagoreanTriplet pt = new PythagoreanTriplet();
+                Console.WriteLine("Input sum of desired Pythagorean Triplet product:");
+                Console.WriteLine(_closeOut);
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Answer: " + pt.Answer9(Convert.ToInt64(value)));
+                Console.WriteLine("Values A {0}, B {1}, C {2} ", pt.A, pt.B, pt.C);
+                sw.Stop();
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
             Console.ReadLine();
-        }
+        }     
     }
 }
