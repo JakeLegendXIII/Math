@@ -31,7 +31,9 @@ namespace Math
         // Largest Product in Series
         private static readonly bool IS_LARGEST_PRODUCT_IN_SERIES = false;
         // Pythagorean Triplet
-        private static readonly bool IS_PYTHAGOREAN_TRIPLET = true;
+        private static readonly bool IS_PYTHAGOREAN_TRIPLET = false;
+        // Summation of Primes
+        private static readonly bool IS_SUMMATION_OF_PRIMES = true;
 
         static void Main(string[] args)
         {
@@ -212,6 +214,23 @@ namespace Math
             }
             #endregion
 
+            #region Summation of Primes
+            if (IS_SUMMATION_OF_PRIMES)
+            {
+                Stopwatch sw = new Stopwatch();
+                Prime p = new Prime();
+                Console.WriteLine("Input max number (primes below it will be summed) : ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Sum of Primes: " + p.GetSumOfPrimes(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+
+            #endregion
             Console.ReadLine();
         }     
     }

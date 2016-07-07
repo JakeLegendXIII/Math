@@ -28,6 +28,19 @@ namespace Math.MathClasses
             }
             return answer;
         }
+        //Problem 10
+        public long GetSumOfPrimes(int num)
+        {
+            long answer = 0;
+            for (var i = 1; i <= num; i++)
+            {
+                if(IsPrime(i))
+                {
+                    answer += i;
+                }
+            }
+            return answer;
+        }
 
         public static bool IsPrime(int p)
         {
