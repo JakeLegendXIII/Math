@@ -33,7 +33,9 @@ namespace Math
         // Pythagorean Triplet
         private static readonly bool IS_PYTHAGOREAN_TRIPLET = false;
         // Summation of Primes
-        private static readonly bool IS_SUMMATION_OF_PRIMES = true;
+        private static readonly bool IS_SUMMATION_OF_PRIMES = false;
+        //Largest Product in Grid
+        private static readonly bool IS_LARGEST_PRODUCT_IN_GRID = true;
 
         static void Main(string[] args)
         {
@@ -231,6 +233,22 @@ namespace Math
             }
 
             #endregion
+
+            #region Largest Product in a grid
+            if (IS_LARGEST_PRODUCT_IN_GRID)
+            {
+                Stopwatch sw = new Stopwatch();
+                Prime p = new Prime();
+                LargestProductSeries lps = new LargestProductSeries();
+                sw.Start();
+                Console.WriteLine("Answer 11 for product in Grid: " + lps.Answer11());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
             Console.ReadLine();
         }     
     }
