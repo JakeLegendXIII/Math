@@ -51,6 +51,7 @@
     <Compile Include="MathClasses\PythagoreanTriplet.cs" />
     <Compile Include="MathClasses\SmallestMultiple.cs" />
     <Compile Include="MathClasses\SumSquareDifference.cs" />
+    <Compile Include="MathClasses\TriangularNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -35,7 +35,9 @@ namespace Math
         // Summation of Primes
         private static readonly bool IS_SUMMATION_OF_PRIMES = false;
         //Largest Product in Grid
-        private static readonly bool IS_LARGEST_PRODUCT_IN_GRID = true;
+        private static readonly bool IS_LARGEST_PRODUCT_IN_GRID = false;
+        //Highly divisible triangular number
+        private static readonly bool IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER = true;
 
         static void Main(string[] args)
         {
@@ -249,6 +251,24 @@ namespace Math
             }
             #endregion
 
+
+            #region Highly divisible trangular number
+            if (IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER)
+            {
+                Stopwatch sw = new Stopwatch();
+                Prime p = new Prime();
+                TriangularNumber tn = new TriangularNumber();
+                Console.WriteLine("Input max number (for divisors of triangular number) : ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Number of first triangle with 500 divisors: " + tn.Answer12(Convert.ToInt64(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
             Console.ReadLine();
         }     
     }
