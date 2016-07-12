@@ -37,7 +37,9 @@ namespace Math
         //Largest Product in Grid
         private static readonly bool IS_LARGEST_PRODUCT_IN_GRID = false;
         //Highly divisible triangular number
-        private static readonly bool IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER = true;
+        private static readonly bool IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER = false;
+        // Large Sum
+        private static readonly bool IS_LARGE_SUM = true;
 
         static void Main(string[] args)
         {
@@ -240,7 +242,6 @@ namespace Math
             if (IS_LARGEST_PRODUCT_IN_GRID)
             {
                 Stopwatch sw = new Stopwatch();
-                Prime p = new Prime();
                 LargestProductSeries lps = new LargestProductSeries();
                 sw.Start();
                 Console.WriteLine("Answer 11 for product in Grid: " + lps.Answer11());
@@ -251,18 +252,32 @@ namespace Math
             }
             #endregion
 
-
             #region Highly divisible trangular number
             if (IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER)
             {
                 Stopwatch sw = new Stopwatch();
-                Prime p = new Prime();
                 TriangularNumber tn = new TriangularNumber();
                 Console.WriteLine("Input max number (for divisors of triangular number) : ");
                 string value = Console.ReadLine();
                 Console.WriteLine(_closeOut);
                 sw.Start();
                 Console.WriteLine("Number of first triangle with 500 divisors: " + tn.Answer12(Convert.ToInt64(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Large Sum
+            if (IS_LARGE_SUM)
+            {
+                Stopwatch sw = new Stopwatch();
+                LargestSumSeries lss = new LargestSumSeries();
+                Console.WriteLine("Answer 13 coming up! : ");
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("First 10 digits of Sum for Answer 13: " + lss.Answer13());
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
