@@ -39,7 +39,9 @@ namespace Math
         //Highly divisible triangular number
         private static readonly bool IS_HIGHLY_DIVISIBLE_TRIANGLE_NUMBER = false;
         // Large Sum
-        private static readonly bool IS_LARGE_SUM = true;
+        private static readonly bool IS_LARGE_SUM = false;
+        // Longest Collatz Sequence
+        private static readonly bool IS_LONGEST_COLLATZ = true;
 
         static void Main(string[] args)
         {
@@ -284,6 +286,24 @@ namespace Math
                 Console.WriteLine(_closeOut);
             }
             #endregion
+
+            #region Longest Collatz sequence
+            if (IS_LONGEST_COLLATZ)
+            {
+                Stopwatch sw = new Stopwatch();
+                CollatzSequence cs = new CollatzSequence();
+                Console.WriteLine("Input max number: ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Starting number: " + cs.CollatzLargestUnderInput(Convert.ToInt64(value)) + " Sequence length: " + cs.SequenceLength);
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
             Console.ReadLine();
         }     
     }

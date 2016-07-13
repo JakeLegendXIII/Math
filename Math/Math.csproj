@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MathClasses\CollatzSequence.cs" />
     <Compile Include="MathClasses\Fibonnaci.cs" />
     <Compile Include="MathClasses\LargestPrimeFactor.cs" />
     <Compile Include="MathClasses\LargestProductSeries.cs" />
