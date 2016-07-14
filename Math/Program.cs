@@ -41,7 +41,9 @@ namespace Math
         // Large Sum
         private static readonly bool IS_LARGE_SUM = false;
         // Longest Collatz Sequence
-        private static readonly bool IS_LONGEST_COLLATZ = true;
+        private static readonly bool IS_LONGEST_COLLATZ = false;
+        // Latice Path
+        private static readonly bool IS_LATTICE_PATH = true;
 
         static void Main(string[] args)
         {
@@ -304,6 +306,23 @@ namespace Math
             }
             #endregion
 
+            #region LatticePath
+            if (IS_LATTICE_PATH)
+            {
+                Stopwatch sw = new Stopwatch();
+                CollatzSequence cs = new CollatzSequence();
+                LatticePath lp = new LatticePath();
+                Console.WriteLine("Input square grid dimensions: ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("For a {0}x{0} grid there are {1} possible paths. ", Convert.ToInt64(value), lp.LatticePathForSpecifiedGrid(Convert.ToInt64(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
             Console.ReadLine();
         }     
     }

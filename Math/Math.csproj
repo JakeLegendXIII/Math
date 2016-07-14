@@ -49,6 +49,7 @@
     <Compile Include="MathClasses\LargestPrimeFactor.cs" />
     <Compile Include="MathClasses\LargestProductSeries.cs" />
     <Compile Include="MathClasses\LargestSumSeries.cs" />
+    <Compile Include="MathClasses\LatticePath.cs" />
     <Compile Include="MathClasses\Palindrome.cs" />
     <Compile Include="MathClasses\Prime.cs" />
     <Compile Include="MathClasses\PythagoreanTriplet.cs" />
