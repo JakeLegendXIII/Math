@@ -12,6 +12,8 @@ namespace Math
     {
         private static readonly string _closeOut = "-------------------------------------";
         //Add and Subtract necesarry methods with bool flags
+        // Multiples of 3 and 5
+        private static readonly bool IS_MULTIPLES_3_5 = true;
         //Fibonnaci 
         private static readonly bool IS_FIBONNACI_SIMPLE = false;
         private static readonly bool IS_FIBONNACI_SHOW_TERMS = false;
@@ -45,10 +47,23 @@ namespace Math
         // Latice Path
         private static readonly bool IS_LATTICE_PATH = false;
         // Power digit sum
-        private static readonly bool IS_POWER_DIGIT_SUM = true;
+        private static readonly bool IS_POWER_DIGIT_SUM = false;
+        // Number Letter Counts
+        private static readonly bool IS_NUMBER_LETTER_COUNTS = true;
 
         static void Main(string[] args)
         {
+            #region multiples of 3 and 5
+            if (IS_MULTIPLES_3_5)
+            {
+                Console.WriteLine("Sum of all multiples of 3 or 5 below 1000: ");
+                ProblemsDoneByHand pdbh = new ProblemsDoneByHand();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine(pdbh.Answer1());
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
             #region Fibonnaci
             if (IS_FIBONNACI_SIMPLE == true)
             {
@@ -345,6 +360,17 @@ namespace Math
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Number Letter Counts
+            if (IS_NUMBER_LETTER_COUNTS)
+            {
+                ProblemsDoneByHand pdbh = new ProblemsDoneByHand();
+                Console.WriteLine("1- 1000 in words total letters (no spaces or hyphens include ands): ");
+                Console.WriteLine(_closeOut);
+                Console.WriteLine(pdbh.Answer17());
                 Console.WriteLine(_closeOut);
             }
             #endregion
