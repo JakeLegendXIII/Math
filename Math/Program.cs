@@ -43,7 +43,9 @@ namespace Math
         // Longest Collatz Sequence
         private static readonly bool IS_LONGEST_COLLATZ = false;
         // Latice Path
-        private static readonly bool IS_LATTICE_PATH = true;
+        private static readonly bool IS_LATTICE_PATH = false;
+        // Power digit sum
+        private static readonly bool IS_POWER_DIGIT_SUM = true;
 
         static void Main(string[] args)
         {
@@ -310,7 +312,6 @@ namespace Math
             if (IS_LATTICE_PATH)
             {
                 Stopwatch sw = new Stopwatch();
-                CollatzSequence cs = new CollatzSequence();
                 LatticePath lp = new LatticePath();
                 Console.WriteLine("Input square grid dimensions: ");
                 string value = Console.ReadLine();
@@ -323,6 +324,31 @@ namespace Math
                 Console.WriteLine(_closeOut);
             }
             #endregion
+
+            #region PowerDigitSum
+            if (IS_POWER_DIGIT_SUM)
+            {
+                Stopwatch sw = new Stopwatch();
+                PowerDigitSum pds = new PowerDigitSum();
+                Console.WriteLine("Input base number: ");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Input power: ");
+                string value1 = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("{0} to the {1} power: ", Convert.ToInt64(value), (Convert.ToInt64(value1)));
+                Console.WriteLine("Equals: {0}", pds.Power(Convert.ToInt64(value), Convert.ToInt32(value1)));
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Sum of Digits: ");
+                Console.WriteLine(pds.BetterSumOfDigits(pds.Power(Convert.ToInt64(value), Convert.ToInt32(value1))));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
             Console.ReadLine();
         }     
     }
