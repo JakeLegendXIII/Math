@@ -13,7 +13,7 @@ namespace Math
         private static readonly string _closeOut = "-------------------------------------";
         //Add and Subtract necesarry methods with bool flags
         // Multiples of 3 and 5
-        private static readonly bool IS_MULTIPLES_3_5 = true;
+        private static readonly bool IS_MULTIPLES_3_5 = false;
         //Fibonnaci 
         private static readonly bool IS_FIBONNACI_SIMPLE = false;
         private static readonly bool IS_FIBONNACI_SHOW_TERMS = false;
@@ -49,7 +49,11 @@ namespace Math
         // Power digit sum
         private static readonly bool IS_POWER_DIGIT_SUM = false;
         // Number Letter Counts
-        private static readonly bool IS_NUMBER_LETTER_COUNTS = true;
+        private static readonly bool IS_NUMBER_LETTER_COUNTS = false;
+        // Maximum path sum 1
+        private static readonly bool IS_MAX_PATH_SUM = false;
+        // Counting Sundays
+        private static readonly bool IS_COUNTING_SUNDAYS = true;
 
         static void Main(string[] args)
         {
@@ -371,6 +375,36 @@ namespace Math
                 Console.WriteLine("1- 1000 in words total letters (no spaces or hyphens include ands): ");
                 Console.WriteLine(_closeOut);
                 Console.WriteLine(pdbh.Answer17());
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Maximum path sum
+            if (IS_MAX_PATH_SUM)
+            {
+                Stopwatch sw = new Stopwatch();
+                MaximumPathSum mps = new MaximumPathSum();
+                Console.WriteLine("Maximum Path Sum Problem 18: ");
+                sw.Start();
+                Console.WriteLine("Answer:  " + mps.Problem18());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Counting Sundays
+            if (IS_COUNTING_SUNDAYS)
+            {
+                Stopwatch sw = new Stopwatch();
+                DayDateCalculation ddc = new DayDateCalculation();
+                Console.WriteLine("Sundays on the first between 1901 - 2000: ");
+                sw.Start();
+                Console.WriteLine("Answer:  " + ddc.Problem19());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
             #endregion
