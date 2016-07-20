@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="MathClasses\CollatzSequence.cs" />
     <Compile Include="MathClasses\DayDateCalculation.cs" />
+    <Compile Include="MathClasses\FactorialSum.cs" />
     <Compile Include="MathClasses\Fibonnaci.cs" />
     <Compile Include="MathClasses\LargestPrimeFactor.cs" />
     <Compile Include="MathClasses\LargestProductSeries.cs" />

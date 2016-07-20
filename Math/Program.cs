@@ -53,7 +53,9 @@ namespace Math
         // Maximum path sum 1
         private static readonly bool IS_MAX_PATH_SUM = false;
         // Counting Sundays
-        private static readonly bool IS_COUNTING_SUNDAYS = true;
+        private static readonly bool IS_COUNTING_SUNDAYS = false;
+        // Factorial Digit Sum
+        private static readonly bool IS_FACTORIAL_DIGIT_SUM = true;
 
         static void Main(string[] args)
         {
@@ -402,6 +404,24 @@ namespace Math
                 Console.WriteLine("Sundays on the first between 1901 - 2000: ");
                 sw.Start();
                 Console.WriteLine("Answer:  " + ddc.Problem19());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Factorial Digit Sum
+            if (IS_FACTORIAL_DIGIT_SUM)
+            {
+                Stopwatch sw = new Stopwatch();
+                FactorialSum fs = new FactorialSum();
+                Console.WriteLine("Enter Factorial digit sum: ");
+                string value = Console.ReadLine();
+                sw.Start();
+                Console.WriteLine("Answer:  " + fs.FactorialDigitSum(Convert.ToInt64(value)));
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Number:  " + fs.Factor);
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
