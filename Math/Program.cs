@@ -55,7 +55,9 @@ namespace Math
         // Counting Sundays
         private static readonly bool IS_COUNTING_SUNDAYS = false;
         // Factorial Digit Sum
-        private static readonly bool IS_FACTORIAL_DIGIT_SUM = true;
+        private static readonly bool IS_FACTORIAL_DIGIT_SUM = false;
+        //Amicable Numbers
+        private static readonly bool IS_AMICABLE_NUMBERS = true;
 
         static void Main(string[] args)
         {
@@ -422,6 +424,22 @@ namespace Math
                 Console.WriteLine("Answer:  " + fs.FactorialDigitSum(Convert.ToInt64(value)));
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Number:  " + fs.Factor);
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Amicable Numbers
+            if (IS_AMICABLE_NUMBERS)
+            {
+                Stopwatch sw = new Stopwatch();
+                AmicableNumbers an = new AmicableNumbers();
+                Console.WriteLine("Enter max number for amicable numbers: ");
+                string value = Console.ReadLine();
+                sw.Start();
+                Console.WriteLine("Answer:  " + an.Simple(Convert.ToInt64(value)));
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);

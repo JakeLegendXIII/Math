@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MathClasses\AmicableNumbers.cs" />
     <Compile Include="MathClasses\CollatzSequence.cs" />
     <Compile Include="MathClasses\DayDateCalculation.cs" />
     <Compile Include="MathClasses\FactorialSum.cs" />
