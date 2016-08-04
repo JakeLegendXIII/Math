@@ -57,7 +57,9 @@ namespace Math
         // Factorial Digit Sum
         private static readonly bool IS_FACTORIAL_DIGIT_SUM = false;
         //Amicable Numbers
-        private static readonly bool IS_AMICABLE_NUMBERS = true;
+        private static readonly bool IS_AMICABLE_NUMBERS = false;
+        //Non-abundant sums
+        private static readonly bool IS_NON_ABUNDANT_SUMS = true;
 
         static void Main(string[] args)
         {
@@ -440,6 +442,22 @@ namespace Math
                 string value = Console.ReadLine();
                 sw.Start();
                 Console.WriteLine("Answer:  " + an.Simple(Convert.ToInt64(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Non-abundant Sums
+            if (IS_NON_ABUNDANT_SUMS)
+            {
+                Stopwatch sw = new Stopwatch();
+                NonAbundantSums nas = new NonAbundantSums();
+                Console.WriteLine("Enter max number for non-abundant sums: ");
+                string value = Console.ReadLine();
+                sw.Start();
+                Console.WriteLine("Answer:  " + nas.Answer23(Convert.ToInt32(value)));
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
