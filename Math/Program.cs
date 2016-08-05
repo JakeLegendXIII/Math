@@ -59,7 +59,9 @@ namespace Math
         //Amicable Numbers
         private static readonly bool IS_AMICABLE_NUMBERS = false;
         //Non-abundant sums
-        private static readonly bool IS_NON_ABUNDANT_SUMS = true;
+        private static readonly bool IS_NON_ABUNDANT_SUMS = false;
+        //Lexicographic Permutations
+        private static readonly bool IS_LEXICOGRAPHIC_PERMUTATIONS = true;
 
         static void Main(string[] args)
         {
@@ -458,6 +460,20 @@ namespace Math
                 string value = Console.ReadLine();
                 sw.Start();
                 Console.WriteLine("Answer:  " + nas.Answer23(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Lexicographic Permutations
+            if(IS_LEXICOGRAPHIC_PERMUTATIONS)
+            {
+                Stopwatch sw = new Stopwatch();
+                LexicographicPermutations lp = new LexicographicPermutations();
+                sw.Start();
+                Console.WriteLine("Answer 24 Lexicographic Permutation for 1-9: " + lp.Answer24());
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);

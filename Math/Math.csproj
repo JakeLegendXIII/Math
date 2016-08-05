@@ -53,6 +53,7 @@
     <Compile Include="MathClasses\LargestProductSeries.cs" />
     <Compile Include="MathClasses\LargestSumSeries.cs" />
     <Compile Include="MathClasses\LatticePath.cs" />
+    <Compile Include="MathClasses\LexicographicPermutations.cs" />
     <Compile Include="MathClasses\MaximumPathSum.cs" />
     <Compile Include="MathClasses\NonAbundantSums.cs" />
     <Compile Include="MathClasses\Palindrome.cs" />
