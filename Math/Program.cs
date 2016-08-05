@@ -15,9 +15,9 @@ namespace Math
         // Multiples of 3 and 5
         private static readonly bool IS_MULTIPLES_3_5 = false;
         //Fibonnaci 
-        private static readonly bool IS_FIBONNACI_SIMPLE = false;
-        private static readonly bool IS_FIBONNACI_SHOW_TERMS = false;
-        private static readonly bool IS_EVEN_FIBONNACI_NUMBERS = false;
+        private static readonly bool IS_FIBONACCI_SIMPLE = false;
+        private static readonly bool IS_FIBONACCI_SHOW_TERMS = false;
+        private static readonly bool IS_EVEN_FIBONACCI_NUMBERS = false;
         // Prime factors
         private static readonly bool IS_LARGEST_PRIME_FACTOR_RECURSIVE = false;
         private static readonly bool IS_LARGEST_PRIME_FACTOR_QUICKER = false;
@@ -61,7 +61,9 @@ namespace Math
         //Non-abundant sums
         private static readonly bool IS_NON_ABUNDANT_SUMS = false;
         //Lexicographic Permutations
-        private static readonly bool IS_LEXICOGRAPHIC_PERMUTATIONS = true;
+        private static readonly bool IS_LEXICOGRAPHIC_PERMUTATIONS = false;
+        //1000 Digit Fibonnaci Number
+        private static readonly bool IS_1000Digit_FIBONACCI = true;
 
         static void Main(string[] args)
         {
@@ -76,30 +78,44 @@ namespace Math
             }
             #endregion
 
-            #region Fibonnaci
-            if (IS_FIBONNACI_SIMPLE == true)
+            #region Fibonacci
+            if (IS_FIBONACCI_SIMPLE == true)
             {
-                Fibonnaci f = new Fibonnaci();
+                Fibonacci f = new Fibonacci();
                 Console.WriteLine("Input a desired Fibonnaci number: ");
                 string value = Console.ReadLine();
-                Console.WriteLine(value + " Fibonnaci number! " + f.Fibonacci(Convert.ToInt32(value)));
-                if (IS_FIBONNACI_SHOW_TERMS == true)
+                Console.WriteLine(value + " Fibonnaci number! " + f.FibonacciSimple(Convert.ToInt32(value)));
+                if (IS_FIBONACCI_SHOW_TERMS == true)
                 {
                     for (int i = 0; i < Convert.ToInt32(value); i++)
                     {
-                        Console.WriteLine(f.Fibonacci(i));
+                        Console.WriteLine(f.FibonacciSimple(i));
                     }
                 }
                 Console.WriteLine(_closeOut);
             }
 
-            if (IS_EVEN_FIBONNACI_NUMBERS == true)
+            if (IS_EVEN_FIBONACCI_NUMBERS == true)
             {
-                Fibonnaci f = new Fibonnaci();
+                Fibonacci f = new Fibonacci();
                 Console.WriteLine("Input Number of Terms");
                 string value = Console.ReadLine();
                 Console.WriteLine(_closeOut);
-                Console.WriteLine(value + "" + f.SumOfEvenFibonnaciTerms(Convert.ToInt32(value)));
+                Console.WriteLine(value + "" + f.SumOfEvenFibonacciTerms(Convert.ToInt32(value)));
+                Console.WriteLine(_closeOut);
+            }
+
+            if (IS_1000Digit_FIBONACCI)
+            {
+                Stopwatch sw = new Stopwatch();
+                Fibonacci f = new Fibonacci();
+                Console.WriteLine("Input Number of Digits");
+                string value = Console.ReadLine();
+                Console.WriteLine(_closeOut);
+                sw.Start();
+                Console.WriteLine("Index for first {0} digit number: {1}", value, f.FibonacciDigitCount(Convert.ToInt32(value)));
+                sw.Stop();
+                Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
             #endregion
