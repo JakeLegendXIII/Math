@@ -63,7 +63,9 @@ namespace Math
         //Lexicographic Permutations
         private static readonly bool IS_LEXICOGRAPHIC_PERMUTATIONS = false;
         //1000 Digit Fibonnaci Number
-        private static readonly bool IS_1000Digit_FIBONACCI = true;
+        private static readonly bool IS_1000Digit_FIBONACCI = false;
+        //Reciprocal cycles
+        private static readonly bool IS_RECIPROCAL_CYCLES = true;
 
         static void Main(string[] args)
         {
@@ -490,6 +492,22 @@ namespace Math
                 LexicographicPermutations lp = new LexicographicPermutations();
                 sw.Start();
                 Console.WriteLine("Answer 24 Lexicographic Permutation for 1-9: " + lp.Answer24());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
+            #endregion
+
+            #region Reciprocal cycles
+            if (IS_RECIPROCAL_CYCLES)
+            {
+                Stopwatch sw = new Stopwatch();
+                ReciprocalCycle rc = new ReciprocalCycle();
+                Console.WriteLine("Enter max number for reciprocal cycle (1000): ");
+                string value = Console.ReadLine();
+                sw.Start();
+                Console.WriteLine("The number with the longest recurring cycle is {0}, and the cycle is length {1}",rc.Answer26(Convert.ToInt32(value)), rc.SequenceLength);
                 sw.Stop();
                 Console.WriteLine(_closeOut);
                 Console.WriteLine("Duration: " + sw.Elapsed);
