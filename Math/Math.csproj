@@ -61,6 +61,7 @@
     <Compile Include="MathClasses\Prime.cs" />
     <Compile Include="MathClasses\ProblemsDoneByHand.cs" />
     <Compile Include="MathClasses\PythagoreanTriplet.cs" />
+    <Compile Include="MathClasses\QuadraticPrimes.cs" />
     <Compile Include="MathClasses\ReciprocalCycle.cs" />
     <Compile Include="MathClasses\SmallestMultiple.cs" />
     <Compile Include="MathClasses\SumSquareDifference.cs" />
