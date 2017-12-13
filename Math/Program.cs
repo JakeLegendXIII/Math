@@ -67,7 +67,9 @@ namespace Math
         //Reciprocal cycles
         private static readonly bool IS_RECIPROCAL_CYCLES = false;
         //Quadratic Primes
-        private static readonly bool IS_QUADRATIC_PRIMES = true;
+        private static readonly bool IS_QUADRATIC_PRIMES = false;
+        //Factorial Sums
+        private static readonly bool IS_FACTORIAL_SUM = true;
 
         static void Main(string[] args)
         {
@@ -453,6 +455,19 @@ namespace Math
                 Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
+
+            if (IS_FACTORIAL_SUM)
+            {
+                Stopwatch sw = new Stopwatch();
+                FactorialSum fs = new FactorialSum();
+                Console.WriteLine("Sum of Factorials from digits = number answer 34: ");
+                sw.Start();
+                Console.WriteLine("The Sum of all numbers who are equal to the sum of their digit's factorials " + fs.SumOfFactorialsIsNumber());
+                sw.Stop();
+                Console.WriteLine(_closeOut);
+                Console.WriteLine("Duration: " + sw.Elapsed);
+                Console.WriteLine(_closeOut);
+            }
             #endregion
 
             #region Amicable Numbers
@@ -517,6 +532,7 @@ namespace Math
             }
             #endregion
 
+            #region Quadratic Primes
             if (IS_QUADRATIC_PRIMES)
             {
                 Stopwatch sw = new Stopwatch();
@@ -529,6 +545,7 @@ namespace Math
                 Console.WriteLine("Duration: " + sw.Elapsed);
                 Console.WriteLine(_closeOut);
             }
+            #endregion
 
             Console.ReadLine();
         }     
